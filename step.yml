@@ -60,10 +60,7 @@ inputs:
       sonar.host.url=https://sonar.example.test
       sonar.report.export.path=sonar-report.json
       ```
-
-    is_required: false
-    is_expand: true
-- is_debug: "false"
+- is_debug: "true"
   opts:
     title: Print all executed shell commands to a build log?
     description: |-
@@ -71,8 +68,8 @@ inputs:
       In addition, debug logging will be enabled for SonarQube (by adding the -X argument).
       
       Options:
-      * "true"
-      * "false" (default)
-    is_expand: false
+      * "true"  (default)
+      * "false" 
+    is_expand: true
     value_options: ["true", "false"]
-run_if: ""
+run_if: "true"
